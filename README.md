@@ -3,24 +3,14 @@ My personal portfolio
 
 <br/>
 <p align="center">
-  <a href="https://github.com/ShaanCoding/https://github.com/Portfolio/">
-    <img src="images/alexander-merola.webp" alt="Logo" width="80" height="80">
+  <a href="https://github.com/PlatosCodes/Portfolio/">
+    <img src="images/alexander-merola.webp" alt="Headshot" width="80" height="80">
   </a>
 
   <h3 align="center">My Portfolio</h3>
 
   <p align="center">
     My portfolio of my personal projects
-    <br/>
-    <br/>
-    <a href="https://github.com/ShaanCoding/https://github.com/Portfolio/"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com/ShaanCoding/https://github.com/Portfolio/">View Demo</a>
-    .
-    <a href="https://github.com/ShaanCoding/https://github.com/Portfolio//issues">Report Bug</a>
-    .
-    <a href="https://github.com/ShaanCoding/https://github.com/Portfolio//issues">Request Feature</a>
   </p>
 </p>
 
