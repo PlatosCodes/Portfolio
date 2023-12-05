@@ -152,3 +152,21 @@ const handleStickyNavbar = () => {
         }
     });
 };
+
+function toggleProjectVideo(card) {
+    const image = card.querySelector('.project-image');
+    const video = card.querySelector('.project-video');
+    const videoSrc = video.getAttribute('data-hover-src');
+
+    if (video.style.display === 'none') {
+        image.style.display = 'none';
+        video.style.display = 'block';
+        video.src = videoSrc;
+        video.load();
+        video.play();
+    } else {
+        video.style.display = 'none';
+        image.style.display = 'block';
+        video.pause();
+    }
+}

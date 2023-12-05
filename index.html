@@ -10,8 +10,8 @@
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" as="style">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
-        <link rel="stylesheet" href="style.css">
-        <!-- <link rel="stylesheet" href="combined.min.css"> -->
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="combined.min.css">
         <link rel="icon" type="image/png" href="./images/know_thyself.webp">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
@@ -143,7 +143,7 @@
                 <h2>My Projects</h2>
                 <p>Click on a project to learn more!</p>
                 <div class="project-grid">
-                    <div class="project-card" data-toggle="modal" data-target="#projectModal1">
+                    <div class="project-card" data-toggle="modal" data-target="#projectModal1" onclick="toggleProjectVideo(this)">
                         <img src="./images/ms_img.png" class="project-image" alt="Placeholder">
                         <video 
                             class="project-video lazy" 
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="project-card" data-toggle="modal" data-target="#projectModal2">
+                    <div class="project-card" data-toggle="modal" data-target="#projectModal2" onclick="toggleProjectVideo(this)">
                         <img src="./images/pixel_demo_img.png" class="project-image" alt="Placeholder">
                         <video 
                             class="project-video lazy" 
@@ -188,7 +188,7 @@
                         </div>
                     </div>
                     
-                    <div class="project-card" data-toggle="modal" data-target="#projectModal3">
+                    <div class="project-card" data-toggle="modal" data-target="#projectModal3" onclick="toggleProjectVideo(this)">
                         <img src="./images/placeholder_img.jpg" class="project-image" alt="Placeholder">
                         <video 
                             class="project-video lazy" 
@@ -211,7 +211,7 @@
                         </div>
                     </div>
                     
-                    <div class="project-card" data-toggle="modal" data-target="#projectModal4">
+                    <div class="project-card" data-toggle="modal" data-target="#projectModal4" onclick="toggleProjectVideo(this)">
                         <img src="./images/nick_img.png" class="project-image" alt="Placeholder">
                         <video 
                             class="project-video lazy" 
