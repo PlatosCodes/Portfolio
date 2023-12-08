@@ -4,7 +4,7 @@ My personal portfolio
 <br/>
 <p align="center">
   <a href="https://github.com/PlatosCodes/Portfolio/">
-    <img src="images/alexander-merola.webp" alt="Headshot" width="80" height="80">
+    <img src="images/alexander-merola.webp" alt="Headshot" width="80" height="120">
   </a>
 
   <h3 align="center">My Portfolio</h3>
