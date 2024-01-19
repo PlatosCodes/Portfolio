@@ -407,6 +407,16 @@ body.dark-mode a {
     color: #4fc3f7;
 }
 
+body.dark-mode .modal-content {
+    background-color: #333; /* Dark background for modals */
+    color: #fff; /* Light text color for better visibility */
+}
+
+body.dark-mode .modal-header, body.dark-mode .modal-body, body.dark-mode .modal-footer {
+    border-color: #444; /* Optional: to adjust modal internal borders if needed */
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
