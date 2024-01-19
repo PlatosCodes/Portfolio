@@ -143,8 +143,30 @@
                 <h2>My Projects</h2>
                 <p>Click on a project to learn more!</p>
                 <div class="project-grid">
+                    <div class="project-card" data-toggle="modal" data-target="#projectModalDesserted" onclick="toggleProjectVideo(this)">
+                        <img src="./images/desserted_img.webp" class="project-image" alt="Desserted Game Thumbnail">
+                        <video 
+                            class="project-video lazy" 
+                            loop
+                            muted
+                            preload="none"
+                            style="display: none;"
+                            data-hover-src="./videos/desserted_demo.mp4">
+                        </video>
+                        <div class="project-title-container">
+                            <div class="project-links">
+                                <a href="https://github.com/PlatosCodes/Desserted" target="_blank" class="project-link">
+                                    <img src="./images/open-external-link-icon.webp" alt="Live">
+                                </a>
+                                <h3 class="project-title">Desserted: The Dessert Card Game</h3>
+                                <a href="https://github.com/PlatosCodes/Desserted" target="_blank" class="project-link">
+                                    <img src="./images/GitHub_Invertocat_Logo.svg" alt="GitHub">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="project-card" data-toggle="modal" data-target="#projectModal1" onclick="toggleProjectVideo(this)">
-                        <img src="./images/ms_img.png" class="project-image" alt="Placeholder">
+                        <img src="./images/ms_img.png" class="project-image" alt="Merola Station Thumbnail">
                         <video 
                             class="project-video lazy" 
                             loop
@@ -164,6 +186,28 @@
                             </a>
                         </div>
                     </div>
+                    </div>
+                    <div class="project-card" data-toggle="modal" data-target="#projectModalPortfolio" onclick="toggleProjectVideo(this)">
+                        <img src="./images/portfolio_thumbnail.png" class="project-image" alt="Portfolio Project Thumbnail">
+                        <video 
+                            class="project-video lazy" 
+                            loop
+                            muted
+                            preload="none"
+                            style="display: none;"
+                            data-hover-src="">
+                        </video>
+                        <div class="project-title-container">
+                            <div class="project-links">
+                                <a href="https://platoscodes.github.io/Portfolio" target="_blank" class="project-link">
+                                    <img src="./images/open-external-link-icon.webp" alt="Live">
+                                </a>
+                                <h3 class="project-title">My Portfolio Project</h3>
+                                <a href="https://github.com/PlatosCodes/Portfolio" target="_blank" class="project-link">
+                                    <img src="./images/GitHub_Invertocat_Logo.svg" alt="GitHub">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card" data-toggle="modal" data-target="#projectModal2" onclick="toggleProjectVideo(this)">
                         <img src="./images/pixel_demo_img.png" class="project-image" alt="Placeholder">
@@ -233,6 +277,52 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Desserted Project Modal -->
+                    <div class="modal fade" id="projectModalDesserted" tabindex="-1" role="dialog" aria-labelledby="projectModalDessertedLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="projectModalDessertedLabel">Desserted: The Dessert Card Game</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <video id="modalVideo1" class="video-fluid" autoplay loop muted poster="./images/desserted_img.webp">
+                                        <source src="./videos/desserted_demo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p><strong>Overview:</strong> Desserted is a strategic, fun, and engaging online card game where players combine ingredients to craft delicious desserts and score points. It's a game of wit, planning, and a dash of luck!</p>
+                                    <h6>Key Features:</h6>
+                                    <ul>
+                                        <li>Multiplayer Gameplay: Compete against friends or online opponents in real-time.</li>
+                                        <li>Strategic Depth: Mix and match ingredients to create high-scoring desserts.</li>
+                                        <li>Dynamic Play: Each game is unique with a variety of ingredients and special cards.</li>
+                                    </ul>
+                                    <h6>Technologies Used:</h6>
+                                    <ul>
+                                        <li>Node.js, Go, PostgreSQL, gRPC, Protobuf, WebSocket</li>
+                                    </ul>
+                                    <h6>Project Structure:</h6>
+                                    <ul>
+                                        <li>backend/: Contains all backend Go code.</li>
+                                        <li>frontend/: Contains all frontend React code.</li>
+                                        <li>docs/: Additional project documentation.</li>
+                                        <li>tests/: Test scripts and files.</li>
+                                    </ul>
+                                    <p>For more information, visit the <a href="https://github.com/PlatosCodes/Desserted" target="_blank">GitHub repository</a>.</p>
+                                    <div class="modal-project-links">
+                                        <a href="https://github.com/PlatosCodes/Desserted" target="_blank" class="project-link">
+                                            <img src="./images/open-external-link-icon.webp" alt="Live">
+                                        </a>
+                                        <a href="https://github.com/PlatosCodes/Desserted" target="_blank" class="project-link">
+                                            <img src="./images/GitHub_Invertocat_Logo.svg" alt="GitHub">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="modal fade" id="projectModal1" tabindex="-1" role="dialog" aria-labelledby="projectModal1Label" aria-hidden="true" data-video-src="./videos/nick_website_demo.mp4">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
@@ -266,6 +356,45 @@
                                             <img src="./images/open-external-link-icon.webp" alt="Live">
                                         </a>
                                         <a href="https://github.com/PlatosCodes/MerolaStation" target="_blank" class="project-link">
+                                            <img src="./images/GitHub_Invertocat_Logo.svg" alt="GitHub">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Project Modal -->
+                    <div class="modal fade" id="projectModalPortfolio" tabindex="-1" role="dialog" aria-labelledby="projectModalPortfolioLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="projectModalPortfolioLabel">My Portfolio Project</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <video id="modalVideo1" class="video-fluid" autoplay loop muted poster="./images/portfolio_thumbnail.png">
+                                        <source src="." type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p>This project showcases my development journey and the various projects I have worked on. It includes detailed descriptions, technologies used, and links to live demos and code repositories.</p>
+                                    <h6>Features:</h6>
+                                    <ul>
+                                        <li>Responsive design for optimal viewing on all device sizes.</li>
+                                        <li>Interactive project cards with modal pop-ups for detailed information.</li>
+                                        <li>Integrated blog section for sharing insights and updates.</li>
+                                    </ul>
+                                    <h6>Technologies Used:</h6>
+                                    <ul>
+                                        <li>HTML, CSS, JavaScript, React</li>
+                                    </ul>
+                                    <p>Visit my portfolio website to see the projects in detail and learn more about my skills and experiences.</p>
+                                    <div class="modal-project-links">
+                                        <a href="https://platoscodes.github.io/Portfolio" target="_blank" class="project-link">
+                                            <img src="./images/open-external-link-icon.webp" alt="Live">
+                                        </a>
+                                        <a href="https://github.com/PlatosCodes/Portfolio" target="_blank" class="project-link">
                                             <img src="./images/GitHub_Invertocat_Logo.svg" alt="GitHub">
                                         </a>
                                     </div>
