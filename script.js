@@ -113,32 +113,6 @@ const initializeModalContent = () => {
     });
 };
 
-// Function for hover effect on project cards
-const initializeProjectCardHover = () => {
-    document.querySelectorAll('.project-card').forEach(card => {
-        // Hover effect for project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            const image = card.querySelector('.project-image');
-            const video = card.querySelector('.project-video');
-            const videoSrc = video.getAttribute('data-hover-src');
-
-            card.addEventListener('mouseenter', () => {
-                image.style.display = 'none';
-                video.style.display = 'block';
-                video.src = videoSrc;
-                video.load();
-                video.play();
-            });
-
-            card.addEventListener('mouseleave', () => {
-                video.style.display = 'none';
-                image.style.display = 'block';
-                video.pause();
-            });
-        });    
-    });
-};
-
 // Function to handle sticky navbar
 const handleStickyNavbar = () => {
     const navbar = document.querySelector('#navbar');
@@ -153,6 +127,44 @@ const handleStickyNavbar = () => {
     });
 };
 
+// Function for hover effect on project cards
+const initializeProjectCardHover = () => {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const image = card.querySelector('.project-image');
+        const video = card.querySelector('.project-video');
+        const videoSrc = video.getAttribute('data-hover-src');
+
+        card.addEventListener('mouseenter', () => {
+            image.style.display = 'none';
+            video.style.display = 'block';
+            video.src = videoSrc;
+            loadAndPlayVideo(video);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            video.pause();
+            video.style.display = 'none';
+            image.style.display = 'block';
+        });
+    });
+};
+
+// Function to load and play video safely with a delay
+const loadAndPlayVideo = (video) => {
+    video.load();
+    setTimeout(() => {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // Automatic playback started
+            }).catch(error => {
+                // Auto-play was prevented
+                console.log("Auto-play was prevented: ", error);
+            });
+        }
+    }, 100); // Delay in milliseconds
+};
+
 function toggleProjectVideo(card) {
     const image = card.querySelector('.project-image');
     const video = card.querySelector('.project-video');
@@ -162,11 +174,10 @@ function toggleProjectVideo(card) {
         image.style.display = 'none';
         video.style.display = 'block';
         video.src = videoSrc;
-        video.load();
-        video.play();
+        loadAndPlayVideo(video);
     } else {
+        video.pause();
         video.style.display = 'none';
         image.style.display = 'block';
-        video.pause();
     }
 }
