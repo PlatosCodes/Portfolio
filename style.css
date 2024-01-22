@@ -366,6 +366,44 @@ header .container {
     animation: fadeInUp 0.5s ease-in-out;
 }
 
+.announcement-banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8d7da;
+    color: #721c24;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.announcement-banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.close-banner {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.announcement-banner a {
+    color: #0056b3; 
+    text-decoration: none;
+}
+
+.announcement-banner a:hover {
+    text-decoration: underline;
+}
+
+
 @keyframes fadeInUp {
     from {
         opacity: 0;

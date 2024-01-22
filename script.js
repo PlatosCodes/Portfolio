@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeProjectCardHover();
     initializeSmoothScrolling();
     handleStickyNavbar();
+    createAnnouncementBanner();
 });
 
 // Function to handle smooth scrolling
@@ -165,6 +166,7 @@ const loadAndPlayVideo = (video) => {
     }, 100); // Delay in milliseconds
 };
 
+
 function toggleProjectVideo(card) {
     const image = card.querySelector('.project-image');
     const video = card.querySelector('.project-video');
@@ -180,4 +182,47 @@ function toggleProjectVideo(card) {
         video.style.display = 'none';
         image.style.display = 'block';
     }
+}
+
+function createAnnouncementBanner() {
+    const banner = document.createElement('div');
+    banner.className = 'announcement-banner';
+    banner.innerHTML = `
+        <p>This page has moved to <a href="https://www.alexandermerola.com" target="_blank">www.alexandermerola.com</a>. Check out my new project "Desserted" now live at <a href="https://desserted.alexandermerola.com" target="_blank">desserted.alexandermerola.com</a>!</p>
+        <button class="close-banner">&times;</button>
+    `;
+
+    // Event listener for the close button
+    banner.querySelector('.close-banner').addEventListener('click', () => {
+        banner.style.display = 'none';
+    });
+
+    // Append the banner to the body
+    document.body.prepend(banner);
+
+    // Adjust banner's top position based on the navbar height
+    const adjustBannerPosition = () => {
+        const navbarHeight = document.querySelector('#navbar').offsetHeight;
+        banner.style.top = navbarHeight + 'px';
+    };
+
+    const mainElement = document.querySelector('main');
+    const adjustMainPadding = () => {
+        const bannerHeight = banner.offsetHeight;
+        mainElement.style.paddingTop = bannerHeight + 'px';
+    };
+
+    // Adjust main padding initially and on window resize
+    adjustMainPadding();
+    window.addEventListener('resize', adjustMainPadding);
+
+    // Event listener for the close button
+    banner.querySelector('.close-banner').addEventListener('click', () => {
+        banner.style.display = 'none';
+        mainElement.style.paddingTop = '0px'; // Reset padding when banner is closed
+    });
+
+    // Call adjustBannerPosition initially and on window resize
+    adjustBannerPosition();
+    window.addEventListener('resize', adjustBannerPosition);
 }
