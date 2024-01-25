@@ -188,7 +188,7 @@ function createAnnouncementBanner() {
     const banner = document.createElement('div');
     banner.className = 'announcement-banner';
     banner.innerHTML = `
-        <p>This page has moved to <a href="https://www.alexandermerola.com" target="_blank">www.alexandermerola.com</a>. Check out my new project "Desserted" now live at <a href="https://desserted.alexandermerola.com" target="_blank">desserted.alexandermerola.com</a>!</p>
+        <p>This page has moved to <a href="https://www.alexandermerola.com" target="_blank">www.alexandermerola.com</a>. Check out my new project "Desserted" now live at <a href="https://www.desserted.alexandermerola.com" target="_blank">desserted.alexandermerola.com</a>!</p>
         <button class="close-banner">&times;</button>
     `;
 
